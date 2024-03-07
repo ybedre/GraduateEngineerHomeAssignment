@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-bool CheckParenthesis(const std::string& s) 
+bool checkParenthesis(const std::string& s) 
 {
     int balance = 0; // tracker for parentheses count
     for (char c : s) 
@@ -30,13 +30,13 @@ int main()
     for (const std::string& testCase : testCases) 
     {
         std::cout << "Expression: " << testCase << " : ";
-        if (CheckParenthesis(testCase)) 
+        if (checkParenthesis(testCase)) 
         {
-            std::cout << "OK\n";
+            std::cout << "OK\n";  //Displays OK only if expression is valid
         } 
         else 
         {
-            std::cout << "NOT OK\n";
+            std::cout << "NOT OK\n";  //Displays NOT OK if expression is invalid
         }
     }
     return 0;
